@@ -20,9 +20,7 @@ fi
 # Count number of files in a given directory.
 num_files=$(find "$filesdir" -type f | wc -l)
 
-
-matching_lines=$(grep -r "$searchstr" | wc -l)
-
+matching_lines=$(grep -r "$searchstr" "$filesdir" | wc -l)
 
 echo "The number of files are $num_files and the number of matching lines are $matching_lines."
 
